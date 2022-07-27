@@ -1,5 +1,5 @@
 import { Container, Card, CardGroup } from 'react-bootstrap';
-import '../style/landingPage.css';
+import '../../css/landingPage.css';
 
 function CardGame() {
         return (
@@ -46,6 +46,6 @@ function CardGame() {
           </Container>
       </div>
           );
-  }
+  };
   
   export default CardGame;

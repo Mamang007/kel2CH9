@@ -1,3 +1,6 @@
+import React from "react";
+import '../../css/landingPage.css';
+
 const Judul = () => {
     return (
       <div className='tittle'>
@@ -6,4 +9,4 @@ const Judul = () => {
     )
 }
 
-export default Judul
+export default Judul;

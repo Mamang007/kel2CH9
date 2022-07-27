@@ -1,5 +1,5 @@
 import { Container, Button } from "react-bootstrap";
-import '../style/landingPage.css';
+import '../../css/landingPage.css';
 
 function Description() {
     return (
