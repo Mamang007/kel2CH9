@@ -1,32 +1,62 @@
-import React from "react";
-
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
-
-import ErrHandlePage from "./views/ErrHandle";
-import GameListPage from "./views/GameListPage";
-import GameDetailsPage from "./views/GameDetailsPage";
-import Register from './views/Register';
-import Login from './views/login';
-
-// Tambah route baru (tambahkan diatas ErrHandlePage)
-// <Route path="/" element={<Component Page nya />}/>
+import React from 'react';
+import './App.css';
+import NavigationBar from "./components/NavigationBar";
+import './style/landingPage.css';
+import Judul from './components/Judul';
+import CardGame from './components/CardGame';
+import Description from './components/Description';
+import { BrowserRouter, Route } from 'react-router-dom'
 
 function App() {
   return (
     <div>
-      <Router>
-        <Routes>
-
-          <Route path="/game-list" element={<GameListPage />}/>
-          <Route path="/game-details/:userId" element={<GameDetailsPage />}/>
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-
-          <Route path="*" element={<ErrHandlePage />} />
-        </Routes>
-      </Router>
-    </div>
+        <div className='section'>
+          <NavigationBar />
+          <Judul />
+          {/* <CardGame /> */}
+          <Description />
+        </div>
+      </div>
   );
-}
+};
+
+function Page1() {
+  return (
+      <div>
+        <div className='section'>
+          <NavigationBar />
+          <Judul />
+          <CardGame />
+          {/* <Description /> */}
+        </div>
+      </div>
+  );
+};
+
+function Page2() {
+  return (
+    <div>
+        <div className='section'>
+          <NavigationBar />
+          <Judul />
+          {/* <CardGame /> */}
+          <Description />
+        </div>
+      </div>
+  );
+};
+
+// function App() {
+//   return (
+//     <BrowserRouter>
+//     <div>
+//       <main>
+//         <Route path='/' exact component={Page1} />>
+//         <Route path='/users' exact component={Page2} />>
+//       </main>
+//     </div>
+//     </BrowserRouter>
+//   );
+// };
 
 export default App;
